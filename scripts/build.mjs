@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile, cp } from 'node:fs/promises';
+import { mkdir, readFile, writeFile, cp, rm } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { pages } from '../src/pages.mjs';
@@ -8,6 +8,9 @@ const root = fileURLToPath(new URL('../', import.meta.url));
 const output = path.join(root, 'dist');
 await mkdir(output, { recursive: true });
 await cp(path.join(root, 'public'), output, { recursive: true });
+if (process.env.VERCEL === '1') {
+  await rm(path.join(output, 'contato', 'enviar.php'), { force: true });
+}
 for (const page of pages) {
   const directory = path.join(output, page.slug);
   await mkdir(directory, { recursive: true });
