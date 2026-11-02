@@ -1,0 +1,12 @@
+{
+  "name": "imersiva/website",
+  "description": "Envio do formulário institucional IMERSIVA",
+  "type": "project",
+  "require": {
+    "php": "^8.2",
+    "phpmailer/phpmailer": "^6.10"
+  },
+  "config": {
+    "sort-packages": true
+  }
+}

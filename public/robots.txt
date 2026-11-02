@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /contato/enviar.php
+
+Sitemap: https://imersivabr.com/sitemap.xml

@@ -1,0 +1,16 @@
+{
+  "name": "imersiva-site",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "npm run build && php -S 127.0.0.1:8080 -t dist",
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "test:browser": "npm run build && playwright test"
+  },
+  "engines": { "node": ">=20" },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0"
+  }
+}

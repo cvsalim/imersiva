@@ -1,0 +1,9 @@
+/dist/
+/vendor/
+/var/
+/config/mail.php
+/node_modules/
+.env
+*.log
+/test-results/
+/playwright-report/
