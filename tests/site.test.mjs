@@ -57,7 +57,7 @@ test('sitemap, robots and deployment configuration agree', async () => {
 });
 
 test('artwork budget stays small and all form fields have server equivalents', async () => {
-  for (const asset of ['logo-light.png', 'earth.webp', 'stars.webp', 'dome-reference.webp', 'share.jpg']) {
+  for (const asset of ['logo-light.png', 'earth.webp', 'stars.webp', 'dome-reference.webp', 'imersiva-dome.webp', 'share.jpg']) {
     assert.ok((await stat(path.join(root, 'assets', asset))).size < 200_000, `${asset} is too heavy`);
   }
   const html = await readFile(path.join(root, 'contato', 'index.html'), 'utf8');
